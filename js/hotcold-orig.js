@@ -75,7 +75,7 @@ function testNumber(y) {
 				alert('Cold!');
 			}
 		else (Math.abs(x-y) >= 99) {
-				alert('Frozen Arctic');
+				alert('Frozen!');
 			}
 }; // end testNumber function
 
