@@ -15,7 +15,9 @@ function newGame() {
 	var userScore = 0;
 	var winner = false;
 	var x = getRandomInt(1, 100); // generate a random integer btwn 1 and 100
+	while (winner == false) {
 	validateNumber();
+}
 
 			function validateNumber() {
 				$('.userinput').keydown(function(event) { 
@@ -46,7 +48,7 @@ function newGame() {
 							$(this).val('');
 							$(this).focus();
 							compareNumber(y);
-
+								
 								function compareNumber(y) {
 									if (x === y) {
 										alert('You won!');
@@ -54,31 +56,24 @@ function newGame() {
 										}
 									else if (Math.abs(x-y) <= 5) {
 											alert('Super Hot!');
-											winner = false;
 										}
 									else if (Math.abs(x-y) <= 10) {
 											alert('Hot!');
-											winner = false;
 										}
 									else if (Math.abs(x-y) <= 25) {
 											alert('Warm!');
-											winner = false;
 										}
 									else if (Math.abs(x-y) <= 40) {
 											alert('Tepid!');
-											winner = false;
 										}
 									else if (Math.abs(x-y) <= 60) {
 											alert('Cool!');
-											winner = false;
 										}
 									else if (Math.abs(x-y) <= 85) {
 											alert('Cold!');
-											winner = false;
 										}
 									else if (Math.abs(x-y) <= 99) {
 											alert('Frozen Arctic');
-											winner = false;
 										}
 								} // end compareNumber function
 							} // end else
